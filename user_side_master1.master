@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#"  AutoEventWireup="true" CodeFile="user_side_master1.master.cs" Inherits="user_side_master1"%>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+        <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.html" />
+
+		<link href="user_side_assets/css/master.css" rel="stylesheet">
+		<link href="user_side_assets/css/header5.css" rel="stylesheet">
+
+		<%--<script src="user_side_assets/js/jquery-1.11.2.min.js"></script>
+		<script src="user_side_assets/js/jquery-ui.min.js"></script>
+		<script src="user_side_assets/js/bootstrap.min.js"></script>
+--%>
+        <script src="user_side_assets/js/jquery-1.11.2.min.js"></script>
+		<script src="user_side_assets/js/jquery-ui.min.js"></script>
+		<script src="user_side_assets/js/bootstrap.min.js"></script>
+
+        <%-- From Admin For Gallery--%>
+        <link href="assets/plugins/isotope/isotope.css" rel="stylesheet" />
+  	<link href="assets/plugins/lightbox/css/lightbox.css" rel="stylesheet" />
+
+    <link href="assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />	
+
+     
+</head>
+	<body class="animated-css home-construction-v5" data-scrolling-animations="true">
+    <form id="Form1" runat="server">
+                        <asp:ScriptManager ID="ScriptManager1" runat="server">
+                        </asp:ScriptManager>
+                       
+    	<div class="sp-body">
+			<!-- Loader Landing Page -->
+			<div id="ip-container" class="ip-container">
+				<div class="ip-header" >
+					<div class="ip-loader">
+						<div class="text-center">
+							<div class="ip-logo">
+								<a class="logo"></a>
+							</div>
+						</div>
+						<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
+							<path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,39.3,10z"/>
+							<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+						</svg> 
+					</div>
+				</div>
+			</div>
+			<!-- Loader end -->
+			
+			<header id="header">
+				<div class="header-top">
+					<div class="container">
+					<ul class="pull-left contact-list">
+						<li>
+							<span class="contact-list_label font-main font-weight-normal"><a href="Doctor/doc_registration_login.aspx"><font color="white">Register As Doctor</font></a></span>
+						</li>
+						<li>
+                            <span class="contact-list_label font-main font-weight-normal"><a href="Doctor/doc_login.aspx"><font color="white">Doctor Login</font></a></span>
+						</li>						
+                        <li id="login_dis" runat="server">
+                            <span class="contact-list_label font-main font-weight-normal"><a href="usersidelogin.aspx"><font color="white">User Login</font></a></span>
+						</li>
+					</ul>
+					<ul class="nav nav-pills nav-top navbar-right" id="master_profile" runat="server">
+						
+						
+					</ul>
+					</div>
+				</div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>			
+			</header>
+			
+		    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+			
+		
+		
+			
+			<footer id="footer">
+				<a class="goToTop font-additional color-main text-uppercase" href="#" id="scrollTop">
+					<i class="fa fa-angle-up"></i>
+					<span>Top</span>
+				</a>
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clearfix wow fadeInLeft" data-wow-delay="0.3s">
+								<a href="index2.aspx" class="footer-top_logo"></a>
+								<div class="footer-top_container clearfix">
+									<span class="font-main font-weight-normal color-additional">Book4Medico is a website to take a Doctor appointment online from anywhere. Book4Medico website is so designed as to ease the workload of Doctor and Patient.  </span>
+									
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clearfix wow fadeInUp" data-wow-delay="0.3s">
+								<h4 class="footer-top_title color-main font-additional font-weight-bold text-uppercase">QUICK LINKS</h4>
+								<div class="footer-top_container clearfix">
+									<ul class="footer-nav">
+										<li><a href="Doctor/doc_registration_login.aspx" class="font-main font-weight-normal color-additional"><i class="fa fa-angle-right customColor"></i> Register As Doctor</a></li>
+										<li><a href="Doctor/doc_login.aspx" class="font-main font-weight-normal color-additional"><i class="fa fa-angle-right customColor"></i> Doctor Login</a></li>
+										<li><a href="usersidelogin.aspx" class="font-main font-weight-normal color-additional"><i class="fa fa-angle-right customColor"></i> User Login</a></li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 clearfix wow fadeInRight" data-wow-delay="0.3s">
+								<h4 class="footer-top_title color-main font-additional font-weight-bold text-uppercase">GET IN TOUCH</h4>
+								<div class="footer-top_container clearfix">
+									<ul class="footer-contact">
+										<li class="font-main font-weight-normal color-additional">
+											<span class="icon_pin" aria-hidden="true"></span>
+											505, Podar Arcade <br>Varachha Road, Surat
+										</li>
+										<li class="font-main font-weight-normal color-additional oneLine">
+											<span class="icon_phone" aria-hidden="true"></span>
+											(987) 6541 023
+										</li>
+										<li class="font-main font-weight-normal color-additional oneLine">
+											<span class="icon_mail" aria-hidden="true"></span>
+											info@templines.com
+										</li>
+										<li class="font-main font-weight-normal color-additional">
+											<span class="icon_clock" aria-hidden="true"></span>
+											Mon to Sat : 9:00 AM - 6:00 PM 
+										</li>										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 clearfix">
+								<span class="footer_copyright color-additional font-main font-weight-light wow fadeInLeft" data-wow-delay="0.3s">Created With <span class="icon_heart customColor" aria-hidden="true"></span> by <span class="font-main font-weight-semibold">Book4Medico.</span></span>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+        </form>
+
+		<script src="user_side_assets/js/modernizr.custom.js"></script>
+		<script src="user_side_assets/js/jquery.placeholder.min.js"></script>
+		<script src="user_side_assets/js/smoothscroll.min.js"></script>
+		<!-- Loader -->
+		<script src="user_side_assets/plugins/loader/js/classie.js"></script>
+		<script src="user_side_assets/plugins/loader/js/pathLoader.js"></script>
+		<script src="user_side_assets/plugins/loader/js/main.js"></script>
+		<script src="user_side_assets/js/classie.js"></script>
+		<!--Owl Carousel-->
+	    <script src="user_side_assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+	    <!-- bxSlider -->
+	    <script src="user_side_assets/plugins/bxslider/jquery.bxslider.min.js"></script>
+		<!--Switcher-->
+		<script src="user_side_assets/plugins/switcher/js/bootstrap-select.js"></script> 
+		<script src="user_side_assets/plugins/switcher/js/evol.colorpicker.min.js" type="text/javascript"></script> 
+		<script src="user_side_assets/plugins/switcher/js/dmss.js"></script>
+	    <!-- SCRIPTS -->
+	    <script type="text/javascript" src="user_side_assets/plugins/isotope/jquery.isotope.min.js"></script> 
+
+		<!--THEME--> 
+		<script src="user_side_assets/js/wow.min.js"></script>
+		<script src="user_side_assets/js/cssua.min.js"></script>
+        <script src="user_side_assets/js/theme.js"></script> 
+
+
+        <!--From Admin Side For Gallery -->
+    <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
+  	<script src="assets/plugins/lightbox/js/lightbox-2.6.min.js"></script>
+	<script src="assets/js/gallery.demo.min.js"></script>
+	<script src="assets/js/apps.min.js"></script>
+
+    <script src="assets/plugins/gritter/js/jquery.gritter.js"></script>
+	<script src="assets/js/ui-modal-notification.demo.min.js"></script>
+
+   
+   
+	</body>
+</html>
